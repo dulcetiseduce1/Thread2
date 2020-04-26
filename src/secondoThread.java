@@ -15,3 +15,4 @@ public class secondoThread implements Runnable{
         System.out.println("Totale secondo array = "+sommaSecondo);
     }
 }
+//fine

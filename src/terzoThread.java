@@ -15,3 +15,4 @@ public class terzoThread implements Runnable{
         System.out.println("Totale terzo array = "+sommaTerzo);
     }
 }
+//fine

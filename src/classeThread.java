@@ -15,3 +15,4 @@ public class classeThread implements Runnable{
         System.out.println("Totale primo array = "+sommaPrimo);
     }
 }
+//fine
