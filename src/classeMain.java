@@ -2,17 +2,17 @@
 public class classeMain {
     public static void main(String[] args) {
 
-        int primoArray[] = new int [5];
+        int[] primoArray = new int [5];
         for(int j=0; j<5; j++){
             primoArray[j]=(int)(Math.random()*100);
         }
 
-        int secondoArray[]=new int[5];
+        int[] secondoArray =new int[5];
         for(int j=0;j<5;j++){
             secondoArray[j]=(int)(Math.random()*100);
         }
 
-        int terzoArray[]=new int[5];
+        int[] terzoArray =new int[5];
         for(int j=0;j<5;j++){
             terzoArray[j]=(int)(Math.random()*100);
         }
@@ -36,7 +36,7 @@ public class classeMain {
         }catch(InterruptedException e){
             e.printStackTrace();
         }
-        System.out.println("Somma totale è "+(primo.sommaPrimo+secondo.sommaSecondo+terzo.sommaTerzo));
+        System.out.println("La somma totale è = "+(primo.sommaPrimo+secondo.sommaSecondo+terzo.sommaTerzo));
 
     }
 }

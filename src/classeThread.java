@@ -8,10 +8,10 @@ public class classeThread implements Runnable{
     @Override
     public void run(){
         System.out.println((Thread.currentThread().getName()+": sommo gli ultimi cinque."));
-        for(int i=0;i<primoDieci.length;i++){
+        for( int i=0; i<primoDieci.length; i++ ) {
             sommaPrimo=sommaPrimo + primoDieci[i];
 
         }
-        System.out.println("Tot primi 5= "+sommaPrimo);
+        System.out.println("Totale primo array = "+sommaPrimo);
     }
 }
