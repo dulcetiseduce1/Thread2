@@ -2,16 +2,41 @@
 public class classeMain {
     public static void main(String[] args) {
 
-        classeThread cos = new classeThread();
-        cos.start();
-
-        //nome thread
-        System.out.println("Output nome thread: " + Thread.currentThread().getName());
-
-        //counter da 1 a 10
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("numero thread: " + i);
-
+        int primoArray[] = new int [5];
+        for(int j=0; j<5; j++){
+            primoArray[j]=(int)(Math.random()*100);
         }
+
+        int secondoArray[]=new int[5];
+        for(int j=0;j<5;j++){
+            secondoArray[j]=(int)(Math.random()*100);
+        }
+
+        int terzoArray[]=new int[5];
+        for(int j=0;j<5;j++){
+            terzoArray[j]=(int)(Math.random()*100);
+        }
+
+        classeThread primo = new classeThread(primoArray);
+        secondoThread secondo = new secondoThread(secondoArray);
+        terzoThread terzo = new terzoThread(terzoArray);
+
+        Thread uno = new Thread(primo);
+        Thread due = new Thread(secondo);
+        Thread tre = new Thread(terzo);
+
+        uno.start();
+        due.start();
+        tre.start();
+
+        try{
+            uno.join();
+            due.join();
+            tre.join();
+        }catch(InterruptedException e){
+            e.printStackTrace();
+        }
+        System.out.println("Somma totale è "+(primo.sommaPrimo+secondo.sommaSecondo+terzo.sommaTerzo));
+
     }
 }

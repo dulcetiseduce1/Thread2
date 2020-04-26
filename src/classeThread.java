@@ -1,15 +1,17 @@
+public class classeThread implements Runnable{
+    public int[] primoDieci = new int[10];
+    public int sommaPrimo=0;
+    public classeThread(int[] primoDieci){
+        this.primoDieci=primoDieci;
+    }
 
-public class classeThread extends Thread {
-    public void run() {
-
-        //nome thread
-        setName("classeThread");
-        System.out.println("Output nome thread: " + Thread.currentThread().getName());
-
-        //counter da 1 a 10
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("numero thread: " + i);
+    @Override
+    public void run(){
+        System.out.println((Thread.currentThread().getName()+": sommo gli ultimi cinque."));
+        for(int i=0;i<primoDieci.length;i++){
+            sommaPrimo=sommaPrimo + primoDieci[i];
 
         }
+        System.out.println("Tot primi 5= "+sommaPrimo);
     }
 }
