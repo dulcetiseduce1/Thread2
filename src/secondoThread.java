@@ -15,3 +15,4 @@ public class secondoThread implements Runnable{
         System.out.println("Tot secondi 5= "+sommaSecondo);
     }
 }
+//fine

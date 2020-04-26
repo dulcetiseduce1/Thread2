@@ -15,3 +15,4 @@ public class terzoThread implements Runnable{
         System.out.println("Tot ultimi 5= "+sommaTerzo);
     }
 }
+//fine

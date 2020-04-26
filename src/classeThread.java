@@ -15,3 +15,4 @@ public class classeThread implements Runnable{
         System.out.println("Tot primi 5= "+sommaPrimo);
     }
 }
+//fine
